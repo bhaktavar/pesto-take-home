@@ -1,0 +1,22 @@
+[
+  {"adCreativeId": "ad01", "userId": "user01", "timestamp": "2024-03-28T12:00:00Z", "website": "https://siteA.com"},
+  {"adCreativeId": "ad02", "userId": "INVALID", "timestamp": "2024-03-28T12:05:00Z", "website": "https://siteB.com"},
+  {"adCreativeId": "ad03", "userId": "user03", "timestamp": "2024-03-28T12:10:00Z", "website": "https://brokenURL"},
+  {"adCreativeId": "ad04", "userId": "user04", "timestamp": "2024-03-28T12:15:00Z", "website": "https://siteD.com"},
+  {"adCreativeId": "ad05", "userId": 12345, "timestamp": "2024-03-28T12:20:00Z", "website": "https://siteE.com"},
+  {"adCreativeId": "ad06", "userId": "user06", "timestamp": "2024-13-28T12:25:00Z", "website": "https://siteF.com"},
+  {"adCreativeId": "ad07", "userId": "user07", "timestamp": "2024-03-28T12:30:00Z", "website": ""},
+  {"adCreativeId": "ad08", "userId": "user08", "timestamp": "2024-03-28T12:35:00Z", "website": "https://siteH.com"},
+  {"adCreativeId": "ad09", "userId": "user09", "timestamp": "2024-03-28T12:40:00Z", "website": null},
+  {"adCreativeId": "ad10", "userId": "user10", "timestamp": "2024-03-28T12:45:00Z", "website": "https://siteJ.com"},
+  {"adCreativeId": "ad11", "userId": "user11", "timestamp": "2024-03-28T12:50:00Z", "website": "https://siteK.com"},
+  {"adCreativeId": "ad12", "userId": "user12", "timestamp": "not a timestamp", "website": "https://siteL.com"},
+  {"adCreativeId": "ad13", "userId": "user13", "timestamp": "2024-03-28T12:55:00Z", "website": "https://siteM.com"},
+  {"adCreativeId": "ad14", "userId": null, "timestamp": "2024-03-28T13:00:00Z", "website": "https://siteN.com"},
+  {"adCreativeId": "ad15", "userId": "user15", "timestamp": "2024-03-28T13:05:00Z", "website": "notAWebsite"},
+  {"adCreativeId": "ad16", "userId": "user16", "timestamp": "2024-03-28T13:10:00Z", "website": "https://siteP.com"},
+  {"adCreativeId": "ad17", "userId": "user17", "timestamp": "2024/03/28 13:15:00", "website": "https://siteQ.com"},
+  {"adCreativeId": "ad18", "userId": "user18", "timestamp": "2024-03-28T13:20:00Z", "website": "https://siteR.com"},
+  {"adCreativeId": "ad19", "userId": false, "timestamp": "2024-03-28T13:25:00Z", "website": "https://siteS.com"},
+  {"adCreativeId": "ad20", "userId": "user20", "timestamp": "2024-03-28T13:30:00Z", "website": ""}
+]
