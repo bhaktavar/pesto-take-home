@@ -17,6 +17,8 @@ We ingest **Ad Impressions** and **Bid Requests** in real-time using a **Kinesis
   5. Write valid data to an **S3** bucket and invalid data to another **S3** bucket.
 - We set up a **CloudWatch** dashboard to compare valid and invalid data and set up alarms to ensure that invalid data is addressed promptly.
 
+![image](https://github.com/bhaktavar/pesto-take-home/assets/43117589/91bc6bc7-464f-45f6-894e-632ec3a029dd)
+
 ## Batch ingestion
 
 *Clicks and Conversions* data is received in CSV format. Assuming this means we are receiving this data in batch from the source, we directly store this incoming data in an **S3** bucket.
@@ -26,4 +28,6 @@ We ingest **Ad Impressions** and **Bid Requests** in real-time using a **Kinesis
 - The **Lambda** is responsible for similar processing as above, including validating and cleaning the data as well as writing valid and invalid data to separate directories in **S3**.
 - We also set up **CloudWatch** dashboards and alarms to track data quality.
 
-![image](https://github.com/bhaktavar/pesto-take-home/assets/43117589/91bc6bc7-464f-45f6-894e-632ec3a029dd)
+![pesto1](https://github.com/bhaktavar/pesto-take-home/assets/43117589/406b2ddd-ddb4-4867-9e8c-7046a6bc23ca)
+
+
