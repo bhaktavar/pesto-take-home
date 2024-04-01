@@ -8,17 +8,15 @@ s3 = boto3.client('s3')
 
 def validate_and_transform(record):
     try:
-        record['timestamp'] = datetime.strptime(record['timestamp'], "%Y-%m-%dT%H:%M:%SZ").isoformat()
+        record['Timestamp'] = datetime.strptime(record['Timestamp'], "%Y-%m-%dT%H:%M:%S").isoformat()
     except ValueError:
         return False
-
-    if not all(isinstance(record.get(field), str) and record.get(field) for field in ['userId', 'adCreativeId']):
+    if not all(isinstance(record.get(field), str) and record.get(field) for field in ['UserID', 'AdID']):
+        return False
+    if not isinstance(record.get('Website'), str) or not re.match(r'^https?://', record['Website']):
         return False
     
-    if not isinstance(record.get('website'), str) or not re.match(r'^https?://', record['website']):
-        return False
-    
-    return True
+    return True 
 
 def lambda_handler():
     valid_data = []
@@ -35,6 +33,8 @@ def lambda_handler():
             valid_data.append(data)
         else:
             invalid_data.append(data)
+
+    key = "ad_impressions" + datetime.today().strftime('%Y-%m-%d')
 
     s3.put_object(Bucket='valid-data-bucket', Key=key, Body=json.dumps(valid_data))
     s3.put_object(Bucket='invalid-data-bucket', Key=key, Body=json.dumps(invalid_data))    
