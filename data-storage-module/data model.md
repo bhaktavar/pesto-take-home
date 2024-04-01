@@ -40,7 +40,7 @@ primary key  (userId, content_type)
 | website      |             |
 
 primary key  (adId, userId)
-interleaved partition key campaignId, adId
+partition key timestamp
 
 **clicks_and_conversions**
 | Column       | Constraints |
@@ -50,4 +50,5 @@ interleaved partition key campaignId, adId
 | campaignId   |             |
 | actionType   |             |
 
-partition key timestamp
+primary key (timestamp, userId, campaignId, actionType)
+partition key (timestamp, actionType) *interleaved*
