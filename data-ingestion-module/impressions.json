@@ -1,22 +1,702 @@
 [
-  {"adCreativeId": "ad01", "userId": "user01", "timestamp": "2024-03-28T12:00:00Z", "website": "https://siteA.com"},
-  {"adCreativeId": "ad02", "userId": "INVALID", "timestamp": "2024-03-28T12:05:00Z", "website": "https://siteB.com"},
-  {"adCreativeId": "ad03", "userId": "user03", "timestamp": "2024-03-28T12:10:00Z", "website": "https://brokenURL"},
-  {"adCreativeId": "ad04", "userId": "user04", "timestamp": "2024-03-28T12:15:00Z", "website": "https://siteD.com"},
-  {"adCreativeId": "ad05", "userId": 12345, "timestamp": "2024-03-28T12:20:00Z", "website": "https://siteE.com"},
-  {"adCreativeId": "ad06", "userId": "user06", "timestamp": "2024-13-28T12:25:00Z", "website": "https://siteF.com"},
-  {"adCreativeId": "ad07", "userId": "user07", "timestamp": "2024-03-28T12:30:00Z", "website": ""},
-  {"adCreativeId": "ad08", "userId": "user08", "timestamp": "2024-03-28T12:35:00Z", "website": "https://siteH.com"},
-  {"adCreativeId": "ad09", "userId": "user09", "timestamp": "2024-03-28T12:40:00Z", "website": null},
-  {"adCreativeId": "ad10", "userId": "user10", "timestamp": "2024-03-28T12:45:00Z", "website": "https://siteJ.com"},
-  {"adCreativeId": "ad11", "userId": "user11", "timestamp": "2024-03-28T12:50:00Z", "website": "https://siteK.com"},
-  {"adCreativeId": "ad12", "userId": "user12", "timestamp": "not a timestamp", "website": "https://siteL.com"},
-  {"adCreativeId": "ad13", "userId": "user13", "timestamp": "2024-03-28T12:55:00Z", "website": "https://siteM.com"},
-  {"adCreativeId": "ad14", "userId": null, "timestamp": "2024-03-28T13:00:00Z", "website": "https://siteN.com"},
-  {"adCreativeId": "ad15", "userId": "user15", "timestamp": "2024-03-28T13:05:00Z", "website": "notAWebsite"},
-  {"adCreativeId": "ad16", "userId": "user16", "timestamp": "2024-03-28T13:10:00Z", "website": "https://siteP.com"},
-  {"adCreativeId": "ad17", "userId": "user17", "timestamp": "2024/03/28 13:15:00", "website": "https://siteQ.com"},
-  {"adCreativeId": "ad18", "userId": "user18", "timestamp": "2024-03-28T13:20:00Z", "website": "https://siteR.com"},
-  {"adCreativeId": "ad19", "userId": false, "timestamp": "2024-03-28T13:25:00Z", "website": "https://siteS.com"},
-  {"adCreativeId": "ad20", "userId": "user20", "timestamp": "2024-03-28T13:30:00Z", "website": ""}
+    {
+        "Timestamp": "2024-03-23T16:06:07",
+        "UserID": "user09",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-27T22:02:16",
+        "UserID": "user13",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-26T13:49:04",
+        "UserID": "user09",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-22T14:35:38",
+        "UserID": "user12",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-30T09:31:30",
+        "UserID": "user14",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-19T17:07:20",
+        "UserID": "user04",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-28T11:55:03",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-02T06:06:28",
+        "UserID": "user03",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-11T13:48:24",
+        "UserID": "user06",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-12T14:55:48",
+        "UserID": "user06",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-16T00:21:54",
+        "UserID": "user06",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-05T10:15:47",
+        "UserID": "user08",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-04T14:18:11",
+        "UserID": "user12",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-14T00:10:11",
+        "UserID": "user09",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-01T06:41:01",
+        "UserID": "user16",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-24T07:48:34",
+        "UserID": "user18",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-15T15:02:17",
+        "UserID": "user02",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-17T00:41:31",
+        "UserID": "user03",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-29T05:15:51",
+        "UserID": "user10",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-23T16:04:09",
+        "UserID": "user19",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-27T12:09:54",
+        "UserID": "user06",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-15T05:37:46",
+        "UserID": "user10",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-29T17:50:52",
+        "UserID": "user13",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-15T20:11:49",
+        "UserID": "user01",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-21T14:54:20",
+        "UserID": "user18",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-17T05:31:37",
+        "UserID": "user16",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-09T06:03:51",
+        "UserID": "user14",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-18T06:38:45",
+        "UserID": "user08",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-16T22:27:08",
+        "UserID": "user13",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-26T03:24:06",
+        "UserID": "user15",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-29T18:29:03",
+        "UserID": "user15",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-13T22:44:02",
+        "UserID": "user03",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-15T23:38:55",
+        "UserID": "user12",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-23T05:35:08",
+        "UserID": "user15",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-01T22:32:25",
+        "UserID": "user01",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-28T05:30:23",
+        "UserID": "user05",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-04T07:07:56",
+        "UserID": "user04",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-18T20:57:27",
+        "UserID": "user17",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-09T10:36:59",
+        "UserID": "user02",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-06T04:50:55",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-11T11:31:10",
+        "UserID": "user12",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-19T00:46:48",
+        "UserID": "user02",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-20T17:11:44",
+        "UserID": "user20",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-15T06:57:46",
+        "UserID": "user20",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-20T15:34:02",
+        "UserID": "user08",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-25T17:06:54",
+        "UserID": "user08",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-12T14:39:50",
+        "UserID": "user01",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-02T21:27:33",
+        "UserID": "user09",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-19T01:46:33",
+        "UserID": "user13",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-03T09:28:43",
+        "UserID": "user14",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-25T02:39:34",
+        "UserID": "user11",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-01T04:10:51",
+        "UserID": "user10",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-08T01:47:23",
+        "UserID": "user15",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-11T08:23:18",
+        "UserID": "user14",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-14T02:36:08",
+        "UserID": "user13",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-30T10:50:46",
+        "UserID": "user13",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-13T21:58:18",
+        "UserID": "user14",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-01T12:12:45",
+        "UserID": "user08",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-08T03:57:59",
+        "UserID": "user02",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-28T20:48:35",
+        "UserID": "user15",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-18T13:32:26",
+        "UserID": "user03",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-24T13:40:37",
+        "UserID": "user11",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-27T00:49:36",
+        "UserID": "user08",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-12T17:57:38",
+        "UserID": "user07",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-29T04:02:55",
+        "UserID": "user17",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-22T04:15:20",
+        "UserID": "user17",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-18T12:08:32",
+        "UserID": "user12",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-26T04:59:42",
+        "UserID": "user10",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-23T21:10:59",
+        "UserID": "user10",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-30T04:13:19",
+        "UserID": "user13",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-22T15:55:34",
+        "UserID": "user17",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-17T20:12:23",
+        "UserID": "user10",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-19T18:32:19",
+        "UserID": "user09",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-09T23:17:48",
+        "UserID": "user02",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-20T14:36:49",
+        "UserID": "user01",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-08T04:22:01",
+        "UserID": "user07",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-13T21:28:39",
+        "UserID": "user16",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-07T07:45:12",
+        "UserID": "user14",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-22T02:55:51",
+        "UserID": "user20",
+        "CampaignID": "campaign002",
+        "AdID": "ad003",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-24T15:51:15",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-02T17:19:40",
+        "UserID": "user20",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-01T05:39:06",
+        "UserID": "user12",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-24T17:49:10",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-25T08:23:43",
+        "UserID": "user11",
+        "CampaignID": "campaign001",
+        "AdID": "ad001",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-28T11:54:08",
+        "UserID": "user07",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-12T10:32:04",
+        "UserID": "user03",
+        "CampaignID": "campaign003",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-16T13:37:27",
+        "UserID": "user03",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-10T11:05:28",
+        "UserID": "user03",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-05T14:31:17",
+        "UserID": "user08",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-27T20:43:51",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-15T07:17:25",
+        "UserID": "user12",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-11T23:03:46",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-06T18:46:27",
+        "UserID": "user06",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-13T00:30:40",
+        "UserID": "user19",
+        "CampaignID": "campaign002",
+        "AdID": "ad001",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-23T06:05:13",
+        "UserID": "user10",
+        "CampaignID": "campaign003",
+        "AdID": "ad003",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-20T03:37:47",
+        "UserID": "user07",
+        "CampaignID": "campaign001",
+        "AdID": "ad002",
+        "Website": "website003"
+    },
+    {
+        "Timestamp": "2024-03-06T04:58:38",
+        "UserID": "user03",
+        "CampaignID": "campaign002",
+        "AdID": "ad002",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-08T05:55:42",
+        "UserID": "user13",
+        "CampaignID": "campaign003",
+        "AdID": "ad001",
+        "Website": "website002"
+    },
+    {
+        "Timestamp": "2024-03-20T11:00:52",
+        "UserID": "user18",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website001"
+    },
+    {
+        "Timestamp": "2024-03-19T23:40:35",
+        "UserID": "user09",
+        "CampaignID": "campaign001",
+        "AdID": "ad003",
+        "Website": "website003"
+    }
 ]
