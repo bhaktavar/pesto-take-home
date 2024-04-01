@@ -28,7 +28,9 @@ def lambda_handler(event, context):
             valid_data.append(row)
         else:
             invalid_data.append(row)
-    
+
+    key = "clicks_and_conversions" + datetime.today().strftime('%Y-%m-%d')
+
     s3.put_object(Bucket='valid-data-bucket', Key=key, Body=json.dumps(valid_data))
     s3.put_object(Bucket='invalid-data-bucket', Key=key, Body=json.dumps(invalid_data))    
 
