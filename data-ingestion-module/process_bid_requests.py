@@ -13,9 +13,9 @@ def validate_and_transform(record):
             return False
         if not len(record.get('userId', '')) > 0:
             return False
-        if not len(record.get('auctionId', '')) > 0:
-            return False
         datetime.strptime(record['timestamp'], "%Y-%m-%dT%H:%M:%SZ")
+        if not all(isinstance(record.get(field), str) for field in ['Demographic', 'Gender', 'Device', 'OperatingSystem', 'Location', 'ContentType', 'AdSpace', 'AdFormat']):
+            return False
     except ValueError:
         return False
     return True
@@ -34,6 +34,8 @@ def lambda_handler(event, context):
         else:
             invalid_data.append(record)
     
+    key = "bid_requests" + datetime.today().strftime('%Y-%m-%d')
+
     s3.put_object(Bucket='valid-data-bucket', Key=key, Body=json.dumps(valid_data))
     s3.put_object(Bucket='invalid-data-bucket', Key=key, Body=json.dumps(invalid_data))    
 
