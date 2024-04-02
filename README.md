@@ -50,4 +50,5 @@ This Ad Tech case study scenario focuses on the challenges and data formats comm
 In order to have a meaningful analytics system with the given data, I am moving ahead with the assumption that a separate data pipeline is responsible for loading **users** data to the final data storage. Without this dimension table, the userId column mentioned for each table becomes meaningless.
 
 ## Final ETL Design
-![image](https://github.com/bhaktavar/pesto-take-home/assets/43117589/6cb40664-893f-4616-83c2-e2038c598681)
+![pesto-4](https://github.com/bhaktavar/pesto-take-home/assets/43117589/5cb04b83-fcd0-45ac-8a5b-2c7bd390b968)
+
